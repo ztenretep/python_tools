@@ -12,6 +12,6 @@ for i in fg_col:
             fcol_esc = "{0}{1}{2}".format(CSI, str(i), "m")
             bcol_esc = "{0}{1}{2}".format(CSI, str(j), "m")
             col_esc = "{0}{1}".format(fcol_esc, bcol_esc)
-            fcol_str = r"\033[" + str(i)
-            bcol_str = r"\033[" + str(j)
+            fcol_str = r"\033[" + str(i) + "m"
+            bcol_str = r"\033[" + str(j) + "m"
             print("{0}{1}{2}{3}".format(col_esc, fcol_str, bcol_str, STD))
