@@ -18,6 +18,9 @@ One common method is as follows:
     os.system('clear')
     os.system('reset')
 
+In this case the Python interface to the OS is using the Shell
+commands clear and reset.
+
 Usage of clear() and reset():
 
     import term_ctrl
