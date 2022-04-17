@@ -17,12 +17,10 @@ class DrawBox:
         self.borderchar = borderchar
         self.top_left = borderchar[0]
         self.top_right = borderchar[1]
-        self.mid_left = borderchar[2]
-        self.mid_right = borderchar[3]
-        self.down_left = borderchar[4]
-        self.down_right = borderchar[5]
-        self.horizontal = borderchar[6]
-        self.vertical = borderchar[7]
+        self.down_left = borderchar[2]
+        self.down_right = borderchar[3]
+        self.horizontal = borderchar[4]
+        self.vertical = borderchar[5]
         self.width = width
         self.height = height
 
@@ -58,8 +56,9 @@ def draw_box(box):
     box.draw_down()
 
 # Set the border char lists.
-BC1 = [u'\u250c', u'\u2510', u'\u251C', u'\u2524', u'\u2514', u'\u2518', u'\u2500', u'\u2502']
-BC2 = [u'\u250c', u'\u2510', u'\u251C', u'\u2524', u'\u2514', u'\u2518', u'\u2500', u'\u2502']
+# TL, TR, DL, DR, H, V
+BC1 = [u'\u250c', u'\u2510', u'\u2514', u'\u2518', u'\u2500', u'\u2502']
+BC2 = [u'\u2554', u'\u2557', u'\u255A', u'\u255D', u'\u2550', u'\u2551']
 
 # Create an instance of DrawBox.
 BORDER = DrawBox(BC1, WIDTH, HEIGHT)
