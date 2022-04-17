@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Create frame arround Text."""
+"""Create empty frame."""
 # pylint: disable=too-few-public-methods
 # pylint: disable=invalid-name
 
