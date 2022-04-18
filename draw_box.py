@@ -43,15 +43,6 @@ class DrawBox:
         self.draw_down()
         return 0
 
-# ===================
-# Function draw_box()
-# ===================
-def draw_box(box):
-    """Draw box."""
-    box.draw_top()
-    box.draw_mid()
-    box.draw_down()
-
 # Set the border char lists.
 # TOPLEFT, TOPRIGHT, DOWNLEFT, DOWNRIGHT, HORIZONTAL, VERTICAL
 BC1 = [u'\u250c', u'\u2510', u'\u2514', u'\u2518', u'\u2500', u'\u2502']
