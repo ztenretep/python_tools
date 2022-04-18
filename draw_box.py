@@ -43,8 +43,8 @@ class DrawBox:
         self.draw_down()
         return 0
 
-# Set the border char lists.
-# TOPLEFT, TOPRIGHT, DOWNLEFT, DOWNRIGHT, HORIZONTAL, VERTICAL
+# Define the border char lists with unicode characters. 
+# BC = [TOPLEFT, TOPRIGHT, DOWNLEFT, DOWNRIGHT, HORIZONTAL, VERTICAL]
 BC1 = [u'\u250c', u'\u2510', u'\u2514', u'\u2518', u'\u2500', u'\u2502']
 BC2 = [u'\u2554', u'\u2557', u'\u255A', u'\u255D', u'\u2550', u'\u2551']
 
