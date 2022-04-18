@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 """Create a frame arround text."""
 
 # Set the constants.
@@ -6,7 +6,8 @@ WIDTH = 80
 HEIGHT = 10
 
 # Set the text list.
-TEXT = ["This is a text,", "printed for demonstration purposes,", "inside a frame, which is", "defined by a set of characters."]
+TEXT = ["This is a text,", "printed for demonstration purposes,",
+        "inside a frame, which is", "defined by a set of characters."]
 
 # ===============
 # Class DrawBox()
@@ -24,13 +25,23 @@ class DrawBox:
         self.bline = self.chars[4] * self.hspan
         self.hspace = ' ' * self.hspan
 
-    def __vertical_spacing(self):
+    @staticmethod
+    def vertical_spacing(text, vspan):
         """Private method __vertical_spacing()."""
-        vspc1 = len(self.text)
-        tmp = self.vspan - vspc1
+        vspc1 = len(text)
+        tmp = vspan - vspc1
         vspc0 = int(tmp/2)
         vspc2 = int(tmp - vspc0)
         return vspc0, vspc1, vspc2
+
+    @staticmethod
+    def horizontal_spacing(text, hspan):
+        """Private method __horizontal_spacing()."""
+        hspc1 = len(text)
+        tmp = hspan - hspc1
+        hspc0 = int(tmp/2)
+        hspc2 = int(tmp - hspc0)
+        return hspc0, hspc1, hspc2
 
     def __draw_line_space(self, count):
         """Private method draw_line()."""
@@ -41,11 +52,8 @@ class DrawBox:
     def __draw_line_text(self, line_count):
         """Private method draw_line()."""
         for count in range(line_count):
-            hlen1 = len(self.text[count])
-            tmp = self.hspan - hlen1
-            hlen0 = int(tmp/2)
-            hlen2 = int(tmp - hlen0)
-            print(self.chars[5] + (' ' * hlen0) + self.text[count] + (' ' * hlen2) + self.chars[5])
+            hspc0, _, hspc2 = self.horizontal_spacing(self.text[count], self.hspan)
+            print(self.chars[5] + (' ' * hspc0) + self.text[count] + (' ' * hspc2) + self.chars[5])
         return 0
 
     def draw_top(self):
@@ -60,7 +68,7 @@ class DrawBox:
 
     def draw_mid(self):
         """Method draw_mid()."""
-        vspc0, vspc1, vspc2 = self.__vertical_spacing()
+        vspc0, vspc1, vspc2 = self.vertical_spacing(self.text, self.vspan)
         self.__draw_line_space(vspc0)
         self.__draw_line_text(vspc1)
         self.__draw_line_space(vspc2)
