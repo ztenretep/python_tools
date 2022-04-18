@@ -1,9 +1,3 @@
 ## python_tools
 
-### term_ctrl.py
-
-<p align="justify">Reset and clear the terminal window using ANSI escape sequences.</p>
-
-### term_color.py
-
-<p align="justify">Print escape sequence of varied foreground and background colors.</p>
+<p align="justify">In this repository I will put a collection of scripts that I need in my daily work.</p>
