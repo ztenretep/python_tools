@@ -1,16 +1,16 @@
-#!/usr/bin/env python
-"""Create frame arround Text."""
+#!/usr/bin/env python3
+"""Create a frame arround text."""
 
 # Set the constants.
 WIDTH = 80
 HEIGHT = 10
 
 # Set the text list.
-TEXT = ["First line", "Second line with text", "Third line also with text", "Last line"]
+TEXT = ["This is a text,", "printed for demonstration purposes,", "inside a frame, which is", "defined by a set of characters."]
 
-# =======================
-# Class TableBorderChar()
-# =======================
+# ===============
+# Class DrawBox()
+# ===============
 class DrawBox:
     """Class __init__ function."""
     # pylint: disable=too-many-instance-attributes
@@ -20,59 +20,61 @@ class DrawBox:
         self.width = box_width
         self.height = box_height
         self.hspan = self.width - 2
-        self.line = self.chars[4] * self.hspan
+        self.vspan = self.height - 2
+        self.bline = self.chars[4] * self.hspan
+        self.hspace = ' ' * self.hspan
 
-    def vlen(self):
-        """Method vlen()."""
-        vspan = self.height - 2
-        vspc0 = len(self.text)
-        temp = vspan - vspc0
-        vspc1 = int(temp/2)
-        vspc2 = temp - vspc1
+    def __vertical_spacing(self):
+        """Private method __vertical_spacing()."""
+        vspc1 = len(self.text)
+        tmp = self.vspan - vspc1
+        vspc0 = int(tmp/2)
+        vspc2 = int(tmp - vspc0)
         return vspc0, vspc1, vspc2
+
+    def __draw_line_space(self, count):
+        """Private method draw_line()."""
+        for _ in range(count):
+            print(self.chars[5] + self.hspace + self.chars[5])
+        return 0
+
+    def __draw_line_text(self, line_count):
+        """Private method draw_line()."""
+        for count in range(line_count):
+            hlen1 = len(self.text[count])
+            tmp = self.hspan - hlen1
+            hlen0 = int(tmp/2)
+            hlen2 = int(tmp - hlen0)
+            print(self.chars[5] + (' ' * hlen0) + self.text[count] + (' ' * hlen2) + self.chars[5])
+        return 0
 
     def draw_top(self):
         """Method draw_top()."""
-        print(self.chars[0] + self.line + self.chars[1])
+        print(self.chars[0] + self.bline + self.chars[1])
         return 0
 
     def draw_down(self):
         """Method draw_down()."""
-        print(self.chars[2] + self.line + self.chars[3])
+        print(self.chars[2] + self.bline + self.chars[3])
         return 0
 
-    def draw_mid(self, text):
+    def draw_mid(self):
         """Method draw_mid()."""
-        hspan = self.width - 2
-        hspc0 = len(text)
-        temp = hspan - hspc0
-        hspc1 = int(temp/2)
-        hspc2 = temp - hspc1
-        print(self.chars[5] + (' ' * hspc1) + text + (' ' * hspc2) + self.chars[5])
+        vspc0, vspc1, vspc2 = self.__vertical_spacing()
+        self.__draw_line_space(vspc0)
+        self.__draw_line_text(vspc1)
+        self.__draw_line_space(vspc2)
         return 0
 
     def draw_box(self):
         """Method draw_box()."""
-        vspc0, vspc1, vspc2 = self.vlen()
         self.draw_top()
-        for _ in range(vspc1 - 1):
-            self.draw_mid('')
-        for i in range(vspc0):
-            self.draw_mid(self.text[i])
-        for _ in range(vspc2 - 1):
-            self.draw_mid('')
+        self.draw_mid()
         self.draw_down()
         return 0
 
-# ===================
-# Function draw_box()
-# ===================
-def draw_box(box):
-    """Draw box."""
-    box.draw_box()
-
 # Set the border char lists.
-# TL, TR, DL, DR, H, V
+# BC = [TOPLEFT, TOPRIGHT, DOWNLEFT, DOWNLEFT, HORIZONTAL, VERTICAL ]
 BC1 = [u'\u250c', u'\u2510', u'\u2514', u'\u2518', u'\u2500', u'\u2502']
 BC2 = [u'\u2554', u'\u2557', u'\u255A', u'\u255D', u'\u2550', u'\u2551']
 
@@ -81,4 +83,4 @@ BORDER = DrawBox(BC1, TEXT, WIDTH, HEIGHT)
 #BORDER = DrawBox(BC2, TEXT, WIDTH, HEIGHT)
 
 # Draw box.
-draw_box(BORDER)
+BORDER.draw_box()
