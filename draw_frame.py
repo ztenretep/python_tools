@@ -2,7 +2,6 @@
 """Create a frame arround text.
 
 Unicode in the range of U+2500 to U+257F is used for the border chars.
-
 """
 # pylint: disable=consider-using-enumerate
 # pylint: disable=too-few-public-methods
