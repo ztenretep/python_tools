@@ -168,5 +168,5 @@ def main():
 
 # Execute script as program or as module.
 if __name__ == "__main__":
-    # Call main funvtion.
+    # Call main function.
     main()
