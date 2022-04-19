@@ -3,6 +3,9 @@
 <p align="justify">In this repository I will put a collection of Python scripts and snippets that I need in my daily work.</p>
 <p align="justify">Personally, I like to use ANSI escape sequences. They are easy to use, no extra packages have to be installed and they are fast. Previously I used ASCII characters, before Unicode characters became the standard. Using ASCII characters is old fashioned style from the early beginning of the computer age. New style is the use of Unicode characters.</p>
 
+<p align="justify">I have prepared my scripts in such a way that they can be tried out immediately by an interested user.</p>
+
+
 ### Development Environment
 
 <p align="justify">Development is done on various Linux installations based on Debian distributions. In general, I do not use other operating systems on desktop computers or laptops. The systems I use are based on AMD and ARM architecture. As a programming language, I prefer to use Bash or Python. Python is used in the current version 3. The verification of the Python code is done with Pylint.</p>
