@@ -10,4 +10,10 @@
 
 ### Donation
 
-<div class="snippet-clipboard-content position-relative overflow-auto" data-snippet-clipboard-copy-content="Dogecoin: DMh7EXf7XbibFFsqaAetdQQ77Zb5TVCXiX"><pre><code>DMh7EXf7XbibFFsqaAetdQQ77Zb5TVCXiX</code></pre></div>
+Dogecoin:
+
+<div class="snippet-clipboard-content position-relative overflow-auto" data-snippet-clipboard-copy-content="DMh7EXf7XbibFFsqaAetdQQ77Zb5TVCXiX"><pre><code>DMh7EXf7XbibFFsqaAetdQQ77Zb5TVCXiX</code></pre></div>
+
+Nano:
+
+<div class="snippet-clipboard-content position-relative overflow-auto" data-snippet-clipboard-copy-content="nano_16nb6i8uaetydaik7jf56pzo8n6iawpuj8xo9h7eugp97m5nw6efozrudunx"><pre><code>nano_16nb6i8uaetydaik7jf56pzo8n6iawpuj8xo9h7eugp97m5nw6efozrudunx</code></pre></div>
