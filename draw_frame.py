@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """Create a frame arround text.
 
 Unicode in the range of U+2500 to U+257F is used for the border chars.
