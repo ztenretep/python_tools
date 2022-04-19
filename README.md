@@ -10,6 +10,4 @@
 
 ### Donation
 
-Dogecoin
-
-<div class="snippet-clipboard-content position-relative overflow-auto" data-snippet-clipboard-copy-content="DMh7EXf7XbibFFsqaAetdQQ77Zb5TVCXiX"><pre><code>DMh7EXf7XbibFFsqaAetdQQ77Zb5TVCXiX</code></pre></div>
+<div class="snippet-clipboard-content position-relative overflow-auto" data-snippet-clipboard-copy-content="DMh7EXf7XbibFFsqaAetdQQ77Zb5TVCXiX"><pre><code>Dogecoin: DMh7EXf7XbibFFsqaAetdQQ77Zb5TVCXiX</code></pre></div>
