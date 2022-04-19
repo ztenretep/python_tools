@@ -2,7 +2,7 @@
 
 ### Indroduction
 
-<p align="justify">In this repository I will put a collection of scripts that I need in my daily work.</p>
+<p align="justify">In this repository I will put a collection of Python scripts and snippets that I need in my daily work.</p>
 <p align="justify">Personally, I like to use ANSI escape sequences. They are easy to use, no extra packages have to be installed and they are fast. Previously I used ASCII characters, before Unicode characters became the standard. Using ASCII characters is old fashioned style from the early beginning of the computer age. New style is the use of Unicode characters.</p>
 
 ### Development Environment
