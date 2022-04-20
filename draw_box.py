@@ -23,25 +23,21 @@ class DrawBox:
     def draw_top(self):
         """Class method draw_top()."""
         print(self.chars[0] + self.bline + self.chars[1])
-        return 0
 
     def draw_down(self):
         """Class method draw_down()."""
         print(self.chars[2] + self.bline + self.chars[3])
-        return 0
 
     def draw_mid(self):
         """Class method draw_mid()."""
         for _ in range(self.height - 2):
             print(self.hline)
-        return 0
 
     def draw_box(self):
         """Class method draw_box()."""
         self.draw_top()
         self.draw_mid()
         self.draw_down()
-        return 0
 
 # Define the border char lists with unicode characters. 
 # BC = [TOPLEFT, TOPRIGHT, DOWNLEFT, DOWNRIGHT, HORIZONTAL, VERTICAL]
