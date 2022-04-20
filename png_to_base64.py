@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """Convert a given png image to a base64 encoded image.
 
-Setting the constant WIDTH a text wrap can be performed.
+The standard Python module base64 cannot perform text wrapping.
+Therefore the standard Python module textwrap is used. Setting
+the constant WIDTH a text wrap can be performed.
+
+The Base64 graphic is written to the screen and to a file.
 """
 # pylint: disable=invalid-name
 # pylint: disable=useless-return
 
-# Import the Python module.
+# Import the standard Python modules.
 import base64
 import textwrap
 
