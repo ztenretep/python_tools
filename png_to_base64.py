@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """Convert a given png image to a base64 encoded image.
 
-The standard Python module base64 cannot perform text wrapping.
-Therefore the standard Python module textwrap is used. Setting
-the constant WIDTH a text wrap can be performed.
+The standard Python module base64 cannot perform text wrapping. Therefore
+the standard Python module textwrap is used. Setting the constant WIDTH a
+text wrap can be performed.
 
 The Base64 graphic is written to the screen and to a file.
 """
 # pylint: disable=invalid-name
 # pylint: disable=useless-return
 
-# Import the standard Python modules.
+# Import the Python module.
 import base64
 import textwrap
 
@@ -28,7 +28,7 @@ FN_OUT = "test_logo.b64"
 # ====================
 def read_file(fn):
     """Read an image file.
-    @param  fn       (str)  : Filename as string
+    @params fn       (str)  : Filename as string
     @return img_data (bytes): Image data as byte string
     """
     # Open a file for reading.
@@ -43,9 +43,9 @@ def read_file(fn):
 # =====================
 def write_file(fn, b64_strlist):
     """Write an image file.
-    @params  fn          (str) : Filename as string
-             b64_strlist (list): List of strings
-    @return  None
+    @params fn          (str) : Filename as string
+            b64_strlist (list): List of strings
+    @return None
     """
     # Get the length of the list.
     length = len(b64_strlist)
@@ -76,6 +76,9 @@ def print_b64(b64_strlist):
     # Return None
     return None
 
+# ====================
+# Main script function
+# ====================
 def main(fn_in, fn_out):
     """Main script function.
     @params fn_in  (str): Name of png file
