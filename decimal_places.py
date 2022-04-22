@@ -9,6 +9,7 @@ separator. Then the number of digits of the decimal part is determined.
 """
 
 # Import the standard Python module.
+Import sys
 
 # Set the decimal number.
 DECNUM = 3.141592653
@@ -43,7 +44,8 @@ def main(decnum):
 
 # Run script as program or as module.
 if __name__ == "__main__":
-    # Get argument from command line.
-    arg = sys.argv[1:]
+    # Get decimal number from command line.
+    arg = sys.argv[1]
+    decnum if  is not None else DECNUM
     # Call the main function.
     main(DECNUM)
