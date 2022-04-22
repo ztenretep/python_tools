@@ -14,7 +14,7 @@ is used.
 # Import the standard Python module.
 import sys
 
-# Set the decimal number.
+# Set the decimal number constant.
 DECNUM = 3.141592653
 
 # ======================================
