@@ -8,6 +8,8 @@ of the decimal number is divided into two parts. The decimal point acts as a
 separator. Then the number of digits of the decimal part is determined.
 """
 
+# Import the standard Python module.
+
 # Set the decimal number.
 DECNUM = 3.141592653
 
