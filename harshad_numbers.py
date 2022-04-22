@@ -10,7 +10,13 @@ def checksum(n):
         n = n // 10
     return cs
 
+# Function is_hashard()
+def is_hashard(i):
+    if i % checksum(i) == 0:
+        return True
+    return False
+
 # Print result to screen.
 for i in range (1, 101):
-    if i % checksum(i) == 0:
+    if is_hashard(i) == True:
         print(i)
