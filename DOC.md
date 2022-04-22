@@ -10,4 +10,4 @@
 
 <pre><code>decimal_places(decnum)</code></pre>
 
-<p align="justify">is doing the whole job.</p>
+<p align="justify">is doing the whole job. Everything else around it is input and output for testing purposes.</p>
