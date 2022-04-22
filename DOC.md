@@ -4,4 +4,6 @@
 
 <pre><code>decimal_places.py</code></pre>
 
-<p align="justify">determines the number of decimal places after the decimal point.</p>
+<p align="justify">determines the number of decimal places after the decimal point of a given decimal number.</p>
+
+<p align="justify"></p>
