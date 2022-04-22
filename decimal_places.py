@@ -45,7 +45,8 @@ def main(decnum):
 # Run script as program or as module.
 if __name__ == "__main__":
     # Get decimal number from command line.
-    arg = sys.argv[1]
+    if len(sys.argv) > 1:
+        arg = sys.argv[1]
     decnum = arg if arg is not None else DECNUM
     # Call the main function.
-    main(DECNUM)
+    main(decnum)
