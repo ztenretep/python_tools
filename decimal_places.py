@@ -11,12 +11,19 @@ separator. Then the number of digits of the decimal part is determined.
 # Set the decimal number.
 DECNUM = 3.141592653
 
-# =========================
-# Function decimal_places()
-# =========================
+# ======================================
+# User defined function decimal_places()
+# ======================================
 def decimal_places(decnum):
-    """Function to get the number of decimal places."""
-    # Get the number of decimal places after the decimal point.
+    """Function to get the number of decimal places.
+
+    Determine the number of decimal places after the
+    decimal point.
+
+    @params  decnum (float) : Decimal number
+    @returns number (int)   : Decimal places  
+    """
+    # Determine the number of decimal places.
     number = len(str(decnum).split('.')[1])
     # Return the number of decimal places.
     return number
