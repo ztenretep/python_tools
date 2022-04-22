@@ -2,8 +2,8 @@
 """Calculate the Harshad numbers.
 """
 
-# Function checksum()
-def checksum(n):
+# Function check_sum()
+def check_sum(n):
     cs = 0
     while n > 0:
         cs += int(n % 10)
@@ -12,7 +12,7 @@ def checksum(n):
 
 # Function is_hashard()
 def is_hashard(i):
-    if i % checksum(i) == 0:
+    if i % check_sum(i) == 0:
         return True
     return False
 
