@@ -9,7 +9,7 @@ separator. Then the number of digits of the decimal part is determined.
 """
 
 # Import the standard Python module.
-Import sys
+import sys
 
 # Set the decimal number.
 DECNUM = 3.141592653
