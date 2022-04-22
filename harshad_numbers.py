@@ -1,12 +1,12 @@
 #!/use/bin/python3
-"""Calculated the Harshad numbers."""
+"""Calculate the Harshad numbers."""
 
 # Function checksum
 def checksum(n):
     cs = 0
     while n > 0:
-        cs = int(cs + (n % 10))
-        n = int(n / 10)
+        cs += int(n % 10)
+        n = n // 10
     return cs
 
 # Print result to screen.
