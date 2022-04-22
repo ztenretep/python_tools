@@ -46,6 +46,6 @@ def main(decnum):
 if __name__ == "__main__":
     # Get decimal number from command line.
     arg = sys.argv[1]
-    decnum if  is not None else DECNUM
+    decnum = arg if arg is not None else DECNUM
     # Call the main function.
     main(DECNUM)
