@@ -11,5 +11,5 @@ def checksum(n):
 
 # Print result to screen.
 for i in range (1, 101):
-    if int(i * 10.0 / checksum(i)) % 10 == 0:
+    if i % checksum(i) == 0:
         print(i)
