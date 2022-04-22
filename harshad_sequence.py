@@ -4,7 +4,8 @@
 A Harshad number is an integer number that is divisible by the sum of its
 digits.
 
-Start and stop can be given by command line arguments.
+Start and stop can be given by command line arguments. Otherwise default
+values are used.
 
 The Harshad number sequence looks like:
 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 18, 20, 21, 24, 27, 30, 36, 40, 42, ...
