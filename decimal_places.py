@@ -15,7 +15,7 @@ DECNUM = 3.141592653
 # Function decimal_places()
 # =========================
 def decimal_places(decnum):
-    """Get number of decimal places."""
+    """Function to get the number of decimal places."""
     # Get the number of decimal places after the decimal point.
     number = len(str(decnum).split('.')[1])
     # Return the number of decimal places.
