@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Determine the divisors of an integer number.
+"""Determine the factors of an integer number.
 """
 
 # Declare a list.
@@ -15,9 +15,9 @@ while i <= intnum:
     if intnum % i == 0:
         factor = intnum // i        
         divlst.append(factor)
-        i=i+1
-    else:
-        i=i+1
+    i=i+1
+    #else:
+    #    i=i+1
 
 # Get list in reverse order.
 divlst.reverse()
