@@ -33,12 +33,15 @@ def decimal_places(decnum):
 # ---------------------
 def main(decnum):
     """Main script function."""
-    # Call function.
+    # Print output to screen.
+    print("{0}{1}{2}".format("Number of decimal places of ", decnum, ":"))
     print(decimal_places(decnum))
     # Return None
     return None
 
 # Run script as program or as module.
 if __name__ == "__main__":
+    # Get argument from command line.
+    arg = sys.argv[1:]
     # Call the main function.
     main(DECNUM)
