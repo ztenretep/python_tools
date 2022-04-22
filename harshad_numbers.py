@@ -1,7 +1,8 @@
 #!/use/bin/python3
-"""Calculate the Harshad numbers."""
+"""Calculate the Harshad numbers.
+"""
 
-# Function checksum
+# Function checksum()
 def checksum(n):
     cs = 0
     while n > 0:
