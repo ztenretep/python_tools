@@ -9,18 +9,16 @@ divlst = []
 intnum = int(input("Provide an integer number: "))
 
 # Initialise counter.
-i=1
+i=intnum
 
-while i <= intnum:
+while i > 0:
     if intnum % i == 0:
         factor = intnum // i        
         divlst.append(factor)
-    i=i+1
-    #else:
-    #    i=i+1
+    i = i - 1
 
 # Get list in reverse order.
-divlst.reverse()
+#divlst.reverse()
 
 # Print result to screen.
 print(divlst)
