@@ -1,5 +1,5 @@
 #!/use/bin/python3
-"""Collection of methods for calculating sum of digits.
+"""Methods determining the sum of digits of an integer number.
 
 @params n    (int) : integer number
 @return nsum (int) : sum of digits
@@ -8,7 +8,7 @@
 def sum_of_digits_m0(n):
     """Method 0."""
     nsum = 0
-    if n != 0:
+    if n:
         nsum += (n % 10) + sum_of_digits_m0(n // 10)
     return nsum
 
