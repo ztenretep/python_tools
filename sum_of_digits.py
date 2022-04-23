@@ -8,25 +8,25 @@ def sum_of_digits_m0(n):
 
 def sum_of_digits_m1(n):
     """Method 1."""
-    sum = 0
+    nsum = 0
     if n != 0:
-        sum += (n % 10) + sum_of_digits_m0(n // 10)
-    return sum
+        nsum += (n % 10) + sum_of_digits_m0(n // 10)
+    return nsum
 
 def sum_of_digits_m2(n): 
     """Method 2.""" 
-    sum = 0
+    nsum = 0
     while (n != 0):     
-        sum += (n % 10)
+        nsum += (n % 10)
         n = (n // 10)    
-    return sum
+    return nsum
 
 def sum_of_digits_m3(n):
     """Method 3."""   
-    sum = 0
+    nsum = 0
     for digit in str(n): 
-        sum += int(digit)      
-    return sum
+        nsum += int(digit)      
+    return nsum
 
 def sum_of_digits_m4(n):
     """Method 4."""
@@ -41,6 +41,20 @@ def sum_of_digits_m5(n):
     nstr = str(n)
     digits = [int(x) for x in nstr]
     return sum(digits)
+
+def sum_of_digits_m6(n):
+    """Method 6."""
+    nsum = sum(int(digit) for digit in str(number))
+    return nsum
+
+def sum_of_digits_m7(n):
+    """Method 7."""
+    d = str(n)
+    nsum = sum(int(s) * d.count(s) for s in "123456789")
+    return nsum
+
+
+
 
 
    
