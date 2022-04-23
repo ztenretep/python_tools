@@ -51,8 +51,8 @@ def sum_of_digits_m6(n):
 
 def sum_of_digits_m7(n):
     """Method 7."""
-    d = str(n)
-    nsum = sum(int(s) * d.count(s) for s in "123456789")
+    snum = str(n)
+    nsum = sum(int(s) * snum.count(s) for s in "123456789")
     return nsum
 
 
