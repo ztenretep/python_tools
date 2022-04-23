@@ -10,7 +10,7 @@ def sum_of_digits_m1(n):
     """Method 1."""
     nsum = 0
     if n != 0:
-        nsum += (n % 10) + sum_of_digits_m0(n // 10)
+        nsum += (n % 10) + sum_of_digits_m1(n // 10)
     return nsum
 
 def sum_of_digits_m2(n): 
