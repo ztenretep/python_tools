@@ -34,13 +34,15 @@ def sum_of_digits_m4(n):
     nstr = str(n)
     for x in nstr:
         digits.append(int(x))
-    return sum(digits)
+    nsum = sum(digits)
+    return nsum
 
 def sum_of_digits_m5(n):
     """Method 5."""
     nstr = str(n)
     digits = [int(x) for x in nstr]
-    return sum(digits)
+    nsum = sum(digits)
+    return nsum
 
 def sum_of_digits_m6(n):
     """Method 6."""
