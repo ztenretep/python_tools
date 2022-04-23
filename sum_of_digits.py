@@ -107,8 +107,8 @@ def sum_of_digits_m15(n):
     """Method 15."""
     nsum = 0
     while n:
-        n, remainder = divmod(n, 10)
-        nsum += remainder
+        n, rest = divmod(n, 10)
+        nsum += rest
     return nsum
 
 def sum_of_digits_m16(n):
@@ -116,8 +116,7 @@ def sum_of_digits_m16(n):
     nsum = 0
     while n: 
         take = divmod(n, 10) 
-        rest = take[1] 
-        nsum += rest 
+        nsum += take[1]
         n = take[0] 
     return nsum
 
