@@ -101,5 +101,13 @@ def sum_of_digits_m13(n):
         n = take[0] 
     return nsum
 
+def sum_of_digits_m14(n):
+    """Method 14."""
+    nsum = 0
+    for i in range(len(str(n))):
+        nsum += ord(str(n)[i]) - 48
+    return nsum
+
+
 
 
