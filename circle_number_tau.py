@@ -28,8 +28,8 @@ def tau_gauss_legendre():
             b     = (a * b).sqrt()
             t    -= p * (a - an) * (a - an)
             a, p  = an, 2*p
-            tmp = tau
-            tau    = (a + b) * (a + b) / (2 * t)
+            tmp   = tau
+            tau   = (a + b) * (a + b) / (2 * t)
             if tau == tmp:
                 break
     tau = +tau
