@@ -52,6 +52,3 @@ def decimal_places_m3(fnum):
         return ndp
     else:
         return 0
-
-       
-   
