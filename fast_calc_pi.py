@@ -6,7 +6,7 @@ from decimal import Decimal
 from decimal import getcontext
 from decimal import localcontext
 
-# Places after decimal dot.
+# Set the constants.
 PLACES = 100
 ALPHAS = PLACES + 2
 
