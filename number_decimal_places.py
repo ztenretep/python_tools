@@ -20,6 +20,8 @@ def decimal_places_m0(fnum):
    
     If fnum is of type float the determination of the decimal places
     will fail. fnum must be of type Str here.
+
+    Decimal('0.49') != Decimal(0.49)
     """
     from decimal import Decimal
     dnum = Decimal(fnum)
