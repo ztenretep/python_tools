@@ -27,7 +27,7 @@ def pi_gauss_legendre():
             b     = (a * b).sqrt()
             t    -= p * (a - an) * (a - an)
             a, p  = an, 2*p
-            tmp = pi
+            tmp   = pi
             pi    = (a + b) * (a + b) / (4 * t)
             if pi == tmp:
                 break
