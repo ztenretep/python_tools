@@ -8,6 +8,7 @@ from decimal import localcontext
 
 # Places after decimal dot.
 PLACES = 100
+ALPHAS = PLACES + 2
 
 # Set the precision.
 PRECISION = PLACES + 2
@@ -39,7 +40,7 @@ print("Reference:")
 print(PI)
 
 print("From Gauss-Legendre:")
-pi_calc = str(pi_gauss_legendre())[:PRECISION]
+pi_calc = str(pi_gauss_legendre())[:ALPHAS]
 print(pi_calc)
 
 if PI != pi_calc:
