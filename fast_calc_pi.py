@@ -53,6 +53,6 @@ pi_calc = pi_gauss_legendre(DECIMAL_PLACES)
 print(pi_calc)
 
 # Check if places equal 100.
-if len(PI) != len(pi_calc):
+if len(PI) == len(pi_calc):
     if PI != pi_calc:
         print("ERROR in calculation!")
