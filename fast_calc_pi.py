@@ -14,9 +14,13 @@ import decimal
 # Set the constant.
 DECIMAL_PLACES = 100
 
+#Set Pi.
+PI = '3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679'
+
 # ==================================
 # Function pi_gauss_legendre(places)
 # ==================================
+"""Gauss-Legendre algorithm."""
 def pi_gauss_legendre(places=100):
     precision = places + 2
     decimal.getcontext().prec = precision
@@ -39,13 +43,16 @@ def pi_gauss_legendre(places=100):
     pi = str(+pinew)[:precision]
     return pi
 
-PI = '3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679'
+# Print reference to screen.
 print("Reference:")
 print(PI)
 
+# Print calculation to screen.
 print("From Gauss-Legendre:")
 pi_calc = pi_gauss_legendre(DECIMAL_PLACES)
 print(pi_calc)
 
-if PI != pi_calc:
-    print("ERROR in calculation!")
+# Check if places equal 100.
+if len(PI) != len(pi_calc):
+    if PI != pi_calc:
+        print("ERROR in calculation!")
