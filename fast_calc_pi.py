@@ -8,13 +8,13 @@ The current version compares Pi with 100 digits after the decimal point from
 literature with the the calculated value. 
 """
 
-# Import the standard Python modules.
+# Import the standard Python module.
 import decimal
 
 # Set the constant.
 DECIMAL_PLACES = 100
 
-#Set Pi.
+# Set Pi.
 PI = '3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679'
 
 # ==================================
@@ -27,7 +27,7 @@ def pi_gauss_legendre(places=100):
     D = decimal.Decimal
     with decimal.localcontext() as ctx:
         ctx.prec += 2
-        two = D('2') 
+        two  = D('2') 
         four = D('4')   
         a, b, t, p = 1, 1/two.sqrt(), 1/four, 1
         pinew = None
