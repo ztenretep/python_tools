@@ -5,7 +5,7 @@
 import decimal
 
 # Set the constant.
-PLACES = 100
+DECIMAL_PLACES = 100
 
 # ==================================
 # Function pi_gauss_legendre(places)
@@ -35,7 +35,7 @@ print("Reference:")
 print(PI)
 
 print("From Gauss-Legendre:")
-pi_calc = pi_gauss_legendre(PLACES)
+pi_calc = pi_gauss_legendre(DECIMAL_PLACES)
 print(pi_calc)
 
 if PI != pi_calc:
