@@ -1,5 +1,12 @@
 #!/usr/bin/env python
-"""Fast calculation of Pi."""
+"""High precision calculation of circle number Pi.
+
+The implemented algorithm makes use of the so-called Gauss–Legendre algorithm.
+As parameter the needed number of digits after the decimal point can be given.
+
+The current version compares Pi with 100 digits after the decimal point from
+literature with the the calculated value. 
+"""
 
 # Import the standard Python modules.
 import decimal
@@ -10,7 +17,7 @@ DECIMAL_PLACES = 100
 # ==================================
 # Function pi_gauss_legendre(places)
 # ==================================
-def pi_gauss_legendre(places):
+def pi_gauss_legendre(places=100):
     precision = places + 2
     decimal.getcontext().prec = precision
     D = decimal.Decimal
