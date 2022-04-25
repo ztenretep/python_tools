@@ -12,6 +12,8 @@ Usage:
 
 Testcase:
     100 decimal places act as test case. If no argument is given 100 is used.
+    
+By increasing the internal precision there is no round error in the last digit.    
 """
 # pylint: disable=unused-argument
 # pylint: disable=invalid-name
