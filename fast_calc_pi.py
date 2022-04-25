@@ -16,15 +16,17 @@ def pi_gauss_legendre(places):
     D = decimal.Decimal
     with decimal.localcontext() as ctx:
         ctx.prec += 2
-        a, b, t, p = 1, 1/D(2).sqrt(), 1/D(4), 1
+        two = D('2') 
+        four = D('4')   
+        a, b, t, p = 1, 1/two.sqrt(), 1/four, 1
         pinew = None
         while 1:
-            a1    = (a + b) / 2
+            a1    = (a + b) / two
             b     = (a * b).sqrt()
             t    -= p * (a - a1) * (a - a1)
-            a, p  = a1, 2*p
+            a, p  = a1, two * p
             piold = pinew
-            pinew = (a + b) * (a + b) / (4 * t)
+            pinew = ((a + b) * (a + b)) / (four * t)
             if pinew == piold:
                 break
     pi = str(+pinew)[:precision]
