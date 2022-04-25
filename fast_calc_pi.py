@@ -7,7 +7,11 @@ As parameter the needed number of digits after the decimal point can be given.
 The current version compares Pi with 100 digits after the decimal point from
 literature with the the calculated value.
 
-Usage: python3 [script_name] <decimal_places>
+Usage:
+    python3 [script_name] <decimal_places>
+
+Testcase:
+    100 decimal places act as test case. If no argument is given 100 is used.
 """
 # pylint: disable=unused-argument
 # pylint: disable=invalid-name
