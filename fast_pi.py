@@ -28,7 +28,7 @@ def sqrt(num, prec):
         if sr == sr_old:
             break
     # Return square root.
-    return sr
+    return sr / prec
 
 def pi_digits(digits=1000000):
     """Calculate pi using Chudnovsky.
@@ -63,6 +63,7 @@ def pi_digits(digits=1000000):
     c = n1 * sqrt(n2, digits)
     print(c)
     # Finally calculate Pi.
+    #pi = (c * digits) // total
     pi = (c * digits) // total
     # Return Pi.
     return pi
