@@ -1,12 +1,13 @@
+
 #!/usr/bin/python3
 """Calculate the digits of Pi using Chudnovsky formula.
 
 First result of investigation. Results have to be checked.
 """
+# pylint: disable=invalid-name
 
 # Import Standard Python modules.
 import os
-import math
 from decimal import Decimal, getcontext
 
 # Clear screen.
@@ -15,7 +16,7 @@ os.system('clear')
 # =============
 # Function pi()
 # =============
-def pi(digits=100):
+def pi(a0=100):
     """Calculate the digits of Pi using Chudnovsky formula.
     """
     # Set the constants.
@@ -27,8 +28,8 @@ def pi(digits=100):
     x0 = 24
     x = x1*x1*x1 // x0
     # Set the initial values.
-    a_k = digits
-    a_sum = digits
+    a_k = a0
+    a_sum = a0
     b_sum = 0
     k = 1
     # Run an infinite loop.
@@ -44,12 +45,12 @@ def pi(digits=100):
             break
     # Calculate the total sum.
     total = d0 * a_sum + d1 * b_sum
-    c = Decimal(n1) * Decimal(n2).sqrt() * digits
-    pi = c / Decimal(total)
-    return str(pi)[:PLACES+2]
+    c = Decimal(n1) * Decimal(n2).sqrt() * a0
+    pi_dec = c / Decimal(total)
+    return str(pi_dec)[:PLACES+2]
 
 # Set number of digits.
-PLACES = 1000
+PLACES = 50
 
 # Set the precision.
 getcontext().prec = PLACES + 8
