@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Calculate Pi using the Chudnovsky formula.
+"""
 
 # Import Standard Python modules.
 import os
@@ -29,7 +31,7 @@ def sqrt(num, prec):
     return sr
 
 def pi_chudnovsky(digits=1000000):
-    """Calculate pi using Chudnovsky
+    """Calculate pi using Chudnovsky.
     """
     # Set the constants.
     d0 = 13591409
