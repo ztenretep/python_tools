@@ -44,15 +44,20 @@ def pi_chudnovsky(digits=1000000):
     a_sum = digits
     b_sum = 0
     k = 1
+    # Run an infinite loop.
     while 1:
+        # Sum up the terms.
         a_k *= -(6*k-5)*(2*k-1)*(6*k-1)
         a_k //= k*k*k*c
         a_sum += a_k
         b_sum += k * a_k
         k += 1
+        # Abort criterion.
         if a_k == 0:
             break
+    # Calculate total.
     total = d0 * a_sum + d1 * b_sum
+    # Calculate Pi.
     pi = (n1 * sqrt(n2, digits) * digits) // total
     # Return Pi.
     return pi
