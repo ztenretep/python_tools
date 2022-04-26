@@ -38,9 +38,9 @@ def pi_digits(digits=1000000):
     d1 = 545140134
     n1 = 426880
     n2 = 10005
-    c1 = 640320
-    c0 = 24
-    c = c1*c1*c1 // c0
+    x1 = 640320
+    x0 = 24
+    x = x1*x1*x1 // x0
     # Set the initial values.
     a_k = digits
     a_sum = digits
@@ -50,7 +50,7 @@ def pi_digits(digits=1000000):
     while 1:
         # Sum up the terms.
         a_k *= -(6*k-5)*(2*k-1)*(6*k-1)
-        a_k //= k*k*k*c
+        a_k //= k*k*k*x
         a_sum += a_k
         b_sum += k * a_k
         k += 1
@@ -59,8 +59,11 @@ def pi_digits(digits=1000000):
             break
     # Calculate the total sum.
     total = d0 * a_sum + d1 * b_sum
+    # Calculate the constant value.
+    c = n1 * sqrt(n2, digits)
+    print(c)
     # Finally calculate Pi.
-    pi = (n1 * sqrt(n2, digits) * digits) // total
+    pi = (c * digits) // total
     # Return Pi.
     return pi
 
