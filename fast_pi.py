@@ -64,7 +64,7 @@ def pi_digits(digits=1000000):
     print(c)
     # Finally calculate Pi.
     #pi = (c * digits) // total
-    pi = (c * digits) // total
+    pi = c // total
     # Return Pi.
     return pi
 
