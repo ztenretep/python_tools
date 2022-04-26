@@ -30,7 +30,7 @@ def sqrt(num, prec):
     # Return square root.
     return sr
 
-def pi_chudnovsky(digits=1000000):
+def pi(digits=1000000):
     """Calculate pi using Chudnovsky.
     """
     # Set the constants.
@@ -68,4 +68,4 @@ def pi_chudnovsky(digits=1000000):
 exp = 10 ** 128
 
 # Print Pi.
-print(pi_chudnovsky(exp))
+print(pi(exp))
