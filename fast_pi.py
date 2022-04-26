@@ -16,7 +16,7 @@ def sqrt(num, prec):
     n_prec = num * prec
     # Make an initial guess.
     float_point_prec = 10 ** 64
-    # Calculate the floating point number.
+    # Calculate the initial floating point number.
     n_float = float((n_prec * float_point_prec) // prec) / float_point_prec
     # Calculate the initial square root.
     sr = (int(float_point_prec * math.sqrt(n_float)) * prec) // float_point_prec
@@ -57,9 +57,9 @@ def pi(digits=1000000):
         # Abort criterion.
         if a_k == 0:
             break
-    # Calculate total.
+    # Calculate the total sum.
     total = d0 * a_sum + d1 * b_sum
-    # Calculate Pi.
+    # Finally calculate Pi.
     pi = (n1 * sqrt(n2, digits) * digits) // total
     # Return Pi.
     return pi
