@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Calculate the digits of Pi using the Chudnovsky formula.
+"""Calculate the digits of Pi using Chudnovsky formula.
+
+First result of investigation. Results have to be checked.
 """
 
 # Import Standard Python modules.
@@ -31,7 +33,7 @@ def sqrt(num, prec):
     return sr * prec
 
 def pi_digits(digits=10**200):
-    """Calculate pi using Chudnovsky.
+    """Calculate the digits of Pi using Chudnovsky formula.
     """
     # Set the constants.
     d0 = 13591409
