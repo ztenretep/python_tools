@@ -49,7 +49,7 @@ def pi(digits=100):
     return str(pi)[:PLACES+2]
 
 # Set number of digits.
-PLACES = 1000000
+PLACES = 1000
 
 # Set the precision.
 getcontext().prec = PLACES + 8
