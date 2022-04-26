@@ -15,7 +15,7 @@ def sqrt(num, prec):
     # Set the initial value.
     n_prec = num * prec
     # Make an initial guess.
-    float_point_prec = 10 ** 64
+    float_point_prec = 10 ** 16
     # Calculate the initial floating point number.
     n_float = float((n_prec * float_point_prec) // prec) / float_point_prec
     # Calculate the initial square root.
@@ -28,7 +28,7 @@ def sqrt(num, prec):
         if sr == sr_old:
             break
     # Return square root.
-    return sr / prec
+    return sr * prec
 
 def pi_digits(digits=1000000):
     """Calculate pi using Chudnovsky.
@@ -61,9 +61,7 @@ def pi_digits(digits=1000000):
     total = d0 * a_sum + d1 * b_sum
     # Calculate the constant value.
     c = n1 * sqrt(n2, digits)
-    print(c)
     # Finally calculate Pi.
-    #pi = (c * digits) // total
     pi = c // total
     # Return Pi.
     return pi
