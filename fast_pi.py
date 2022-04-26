@@ -67,7 +67,10 @@ def pi_digits(digits=1000000):
     return pi
 
 # Set number of digits.
-exp = 10 ** 100
+PLACES = 100
+
+# Create initial value.
+exp = 10 ** (2 * PLACES)
 
 # Print Pi.
 print(pi_digits(exp))
