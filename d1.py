@@ -26,14 +26,15 @@ os.system('clear')
 def pi(places=100):
     """Calculate the digits of Pi using Chudnovsky formula.
     """
+    # Calculate extra.
+    extra = 2 * int(math.log10(places)) + 2
     # Set shortcut for Decimal.
     D = Decimal
-    # Create the initial value.
-    extra = 2 * int(math.log10(places))
-    a0 = D(10) ** (places + extra)  
     # Set theprecision
     setcontext(Context(clamp=1))
     getcontext().prec = places + extra  
+    # Create the initial value.  
+    a0 = D(10) ** (places + extra)  
     # Set the constants.
     d0 = 13591409
     d1 = 545140134
