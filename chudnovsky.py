@@ -45,7 +45,6 @@ def pi(places):
     while True:
         k += D('1')
         a_k *= -1 * (6 * k - 5) * (2 * k - 1) * (6 * k - 1)
-        print(a_k)
         a_k /= (k * k * k * x)
         a_sum += D(a_k)
         b_sum += D(k) * D(a_k)
