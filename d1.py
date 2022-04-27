@@ -28,13 +28,12 @@ def pi(places=100):
     """
     # Set shortcut for Decimal.
     D = Decimal
-    # Create initial value.
-    extra = 3
+    # Create the initial value.
+    extra = 2 * int(math.log10(places))
     a0 = D(10) ** (places + extra)  
     # Set theprecision
     setcontext(Context(clamp=1))
-    getcontext().prec = places + extra
-   
+    getcontext().prec = places + extra  
     # Set the constants.
     d0 = 13591409
     d1 = 545140134
