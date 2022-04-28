@@ -27,17 +27,18 @@ def pi(places):
     """
     # Set shortcut for Decimal.
     D = Decimal
-    # Set theprecision
-    getcontext().prec = places + 2
+    # Set the precision
+    extra = int(D(places).log10()) + 2
+    getcontext().prec = places + extra
     # Set the constants.
     d0 = D('13591409')
     d1 = D('545140134')
     n1 = D('426880')
     n2 = D('10005')
-    x1 = D('640320')
-    x0 = D('24')
-    x = D(x1) * D(x1) * D(x1) / D(x0)
-    # x = D('10939058860032000')
+    #x1 = D('640320')
+    #x0 = D('24')
+    #x = D(x1) * D(x1) * D(x1) / D(x0)
+    x = D('10939058860032000')
     # Set the initial values.
     pi_dec = None
     a_k = D('1')
