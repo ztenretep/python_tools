@@ -23,7 +23,7 @@ os.system('clear')
 # Function pi(places)
 # ===================
 def pi(places):
-    """Calculate the digits of Pi using Chudnovsky formula.
+    """Calculate Pi using Chudnovsky formula.
     """
     # Set shortcut for Decimal.
     D = Decimal
