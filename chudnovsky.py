@@ -3,13 +3,14 @@
 
 First try of implementing an algorithm based on a(n) / a(n-1).
 
-Results have to be checked carefully.
+The algorithm works fine up to 1000000 places after the decimal point.
+Lower values were exact in the digits. The precision has to be adapted
+to make higher values also be exact.
 """
 # pylint: disable=invalid-name
 
 # Import Standard Python modules.
 import os
-import math
 from decimal import Decimal, getcontext, Context, setcontext
 
 # Clear screen.
@@ -32,7 +33,8 @@ def pi(places):
     n2 = D('10005')
     x1 = D('640320')
     x0 = D('24')
-    x = x1 * x1 * x1 / x0
+    x = D(x1) * D(x1) * D(x1) / D(x0)
+    # x = D('10939058860032000')
     # Set the initial values.
     pi_dec = None
     a_k = D('1')
@@ -44,14 +46,14 @@ def pi(places):
     k = D('0')
     while True:
         k += D('1')
-        a_k *= -1 * (6 * k - 5) * (2 * k - 1) * (6 * k - 1)
+        a_k *= -1 * (6 * D(k) - 5) * (2 * D(k) - 1) * (6 * D(k) - 1)
         a_k /= (k * k * k * x)
         a_sum += D(a_k)
         b_sum += D(k) * D(a_k)
         if a_sum == a_prevsum:
             break
         a_prevsum = D(a_sum)
-    total = d0 * a_sum + d1 * b_sum
+    total = D(d0) * D(a_sum) + D(d1) * D(b_sum)
     c = Decimal(n1) * D(n2).sqrt()
     pi_dec = D(c) / D(total)
     pi_str = str(pi_dec)[:places+2]
