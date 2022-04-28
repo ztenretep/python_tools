@@ -30,6 +30,10 @@ def pi(places):
     # Set the precision
     extra = int(D(places).log10()) + 2
     getcontext().prec = places + extra
+    # Initialise the variables.
+    c = None
+    total = None
+    pi_dec = None
     # Set the constants.
     d0 = D('13591409')
     d1 = D('545140134')
@@ -39,14 +43,11 @@ def pi(places):
     #x0 = D('24')
     #x = D(x1) * D(x1) * D(x1) / D(x0)
     x = D('10939058860032000')
-    # Set the initial values.
-    pi_dec = None
+    # Set the initial values.   
     a_k = D('1')
     a_sum = D('1')
     b_sum = D('0')
-    a_prevsum = D('0')
-    c = D('0')
-    total = D('0')
+    a_prevsum = D('0')    
     k = 0 # Run index is of type int.
     while True:
         k += 1
