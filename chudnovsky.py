@@ -43,16 +43,16 @@ def pi(places):
     a_k = D('1')
     a_sum = D('1')
     b_sum = D('0')
+    a_prevsum = D('0')
     c = D('0')
     total = D('0')
-    a_prevsum = D('0')
     k = 0 # Run index is of type int.
     while True:
         k += 1
         a_k *= -1 * (6 * k - 5) * (2 * k - 1) * (6 * k - 1)
         a_k /= k * k * k * x
-        a_sum += D(a_k)
-        b_sum += D(k) * D(a_k)
+        a_sum += a_k
+        b_sum += k * a_k
         if a_sum == a_prevsum:
             break
         a_prevsum = a_sum
