@@ -9,6 +9,7 @@ to make higher values also be exact.
 
 References:
 https://docs.python.org/3.8/library/decimal.html
+http://www.numberworld.org/digits/Pi/
 """
 # pylint: disable=invalid-name
 
