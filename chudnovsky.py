@@ -47,12 +47,12 @@ def pi(places):
     while True:
         k += D('1')
         a_k *= -1 * (6 * D(k) - 5) * (2 * D(k) - 1) * (6 * D(k) - 1)
-        a_k /= (k * k * k * x)
+        a_k /= (D(k) * D(k) * D(k) * D(x))
         a_sum += D(a_k)
         b_sum += D(k) * D(a_k)
         if a_sum == a_prevsum:
             break
-        a_prevsum = D(a_sum)
+        a_prevsum = a_sum
     total = D(d0) * D(a_sum) + D(d1) * D(b_sum)
     c = Decimal(n1) * D(n2).sqrt()
     pi_dec = D(c) / D(total)
