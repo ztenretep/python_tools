@@ -1,11 +1,5 @@
 #!/usr/bin/python3
-"""Calculate Pi using Chudnovsky formula.
-
-First try of implementing an algorithm based on a(n) / a(n-1).
-
-The algorithm works fine up to 1000000 places after the decimal point.
-Lower values were exact in the digits. The precision has to be adapted
-to make higher values also be exact.
+"""Calculate Pi using modified Chudnovsky formula.
 
 References:
 https://docs.python.org/3.8/library/decimal.html
@@ -24,7 +18,7 @@ os.system('clear')
 # Function pi(places)
 # ===================
 def pi(places):
-    """Calculate Pi using Chudnovsky formula.
+    """Calculate Pi using modified Chudnovsky formula.
     """
     # Set shortcut for Decimal.
     D = Decimal
